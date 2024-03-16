@@ -5,7 +5,7 @@ const HomeSection = () => {
         <Section>
             <Titulo>A modem publishing platform</Titulo>
             <Paragraph>Grow your audience and build your online brand</Paragraph>
-            <div style={{padding: "0px 15px"}}>
+            <div style={{padding: "0px 10px"}}>
                 <ButtonStart>Start for Free</ButtonStart>
                 <ButtonLearn>Learn More</ButtonLearn>
             </div>
@@ -35,7 +35,7 @@ const Section = styled.section`
 const Titulo = styled.h1`
     
     color: var(--white);
-    font-size: 35px;
+    font-size: 32px;
     padding: 0px 15px;
     margin-bottom: 40px;
 `
