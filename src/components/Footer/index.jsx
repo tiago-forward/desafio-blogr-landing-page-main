@@ -3,7 +3,7 @@ import styled from "styled-components"
 const Footer = () => {
     return (
         <>
-            <footer>
+            <FooterContainer>
                 <nav>
                     <ul>
                         <li>Product</li>
@@ -27,9 +27,17 @@ const Footer = () => {
                         <li>Linkedin</li>
                     </ul>
                 </nav>
-            </footer>
+            </FooterContainer>
         </>
     )
 }
 
 export { Footer }
+
+const FooterContainer = styled.footer`
+    color: white;
+    background-color: var(--very-dark-black-blue);
+    border-top-right-radius: 100px;
+    margin-top: 100px;
+    text-align: center;
+`

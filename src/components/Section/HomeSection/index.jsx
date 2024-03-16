@@ -17,7 +17,7 @@ export { HomeSection }
 
 const Section = styled.section`
     background: rgb(249,139,117);
-    background-image: url("../../../../public/images/bg-pattern-intro-mobile.svg"), linear-gradient(85deg, rgba(249,139,117,1) 0%, rgba(250,78,95,1) 100%);;
+    background-image: url("../../../../public/images/bg-pattern-intro-mobile.svg"), linear-gradient(111deg, rgba(249,139,117,1) 0%, rgba(250,78,95,1) 100%);
     background-repeat: no-repeat;
     /* background-position-y: center;
     background-position-x: 200px; */
