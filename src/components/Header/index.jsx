@@ -47,6 +47,8 @@ const HeaderContainer = styled.header`
     display: flex;
     position: absolute;
     width: 100%;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 600;
 `
 
 const Nav = styled.nav`
@@ -90,11 +92,16 @@ const ButtonLogin = styled.button`
 `
 
 const ButtonSingUp = styled.button`
+    background-color: var(--white);
+    color: var(--light-red);
+    border: 1px solid var(--white);
+    border-radius: 40px;
     margin-left: 40px;
     padding: 14px 30px;
-    border-radius: 40px;
-    border: 1px solid black;
-    background-color: var(--white);
-    color: orange;
-    border: 1px solid var(--white);
+
+    &:hover {
+        background-color: var(--very-light-red);
+        color: var(--white);
+        border: 1px solid var(--very-light-red);
+    }
 `

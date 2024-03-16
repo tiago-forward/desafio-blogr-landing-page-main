@@ -2,20 +2,16 @@ import { createGlobalStyle } from 'styled-components'
 
 export const GlobalStyle = createGlobalStyle`
   :root {
-    --java-50: #f1fcfa;
-    --java-100: #d1f6f3;
-    --java-200: #a3ece7;
-    --java-300: #6ddbd8;
-    --java-400: #45c4c4;
-    --java-500: #26a4a6;
-    --java-600: #1b8386;
-    --java-700: #1a676b;
-    --java-800: #195256;
-    --java-900: #194548;
-    --java-950: #09262a;
-    --white: #fff;
-    --black: #000;
-    --yellow: #fcff87;
+    --light-red: hsl(356, 100%, 66%);
+    --very-light-red: hsl(355, 100%, 74%);
+    --very-dark-blue: hsl(208, 49%, 24%);
+    --white: hsl(0, 0%, 100%);
+    --grayish-blue: hsl(240, 2%, 79%);
+    --very-dark-grayish-blue: hsl(207, 13%, 34%);
+    --very-dark-black-blue: hsl(240, 10%, 16%);
+    --very-dark-gray-blue: hsl(237, 17%, 21%);
+    --very-dark-desaturated-blue: hsl(237, 23%, 32%);
+
   }
 
   * {
@@ -32,9 +28,8 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    background-color: var(--java-200);
-    /* padding: 10px 10px; */
-    font-family: "Roboto", sans-serif;
+    background-color: var(--very-dark-grayish-blue);
+    font-family: "Overpass", sans-serif;
   }
 
   li {
@@ -49,9 +44,9 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   button {
-    border: none;
-    background-color: transparent;
     cursor: pointer;
+    background-color: transparent;
+    border: none;
     font-size: 18px;
   }
 `
