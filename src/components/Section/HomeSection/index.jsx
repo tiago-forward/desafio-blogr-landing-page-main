@@ -5,7 +5,7 @@ const HomeSection = () => {
         <Section>
             <Titulo>A modem publishing platform</Titulo>
             <Paragraph>Grow your audience and build your online brand</Paragraph>
-            <div>
+            <div style={{padding: "0px 15px"}}>
                 <ButtonStart>Start for Free</ButtonStart>
                 <ButtonLearn>Learn More</ButtonLearn>
             </div>
@@ -17,28 +17,33 @@ export { HomeSection }
 
 const Section = styled.section`
     background: rgb(249,139,117);
-    background-image: url("../../../../public/images/bg-pattern-intro-desktop.svg"), linear-gradient(85deg, rgba(249,139,117,1) 0%, rgba(250,78,95,1) 100%);;
+    background-image: url("../../../../public/images/bg-pattern-intro-mobile.svg"), linear-gradient(85deg, rgba(249,139,117,1) 0%, rgba(250,78,95,1) 100%);;
     background-repeat: no-repeat;
-    background-size: cover;
+    /* background-position-y: center;
+    background-position-x: 200px; */
+    background-position-x: center;
     background-position-y: center;
-    background-position-x: 200px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 70vh;
-    border-bottom-left-radius: 150px;
+    border-bottom-left-radius: 120px;
+    text-align: center;
 `
 
 const Titulo = styled.h1`
+    
     color: var(--white);
-    font-size: 70px;
+    font-size: 35px;
+    padding: 0px 15px;
     margin-bottom: 40px;
 `
 const Paragraph = styled.p`
     color: var(--white);
     font-size: 18px;
     margin-bottom: 40px;
+    padding: 0px 15px;
 `
 
 const ButtonStart = styled.button`
@@ -48,7 +53,7 @@ const ButtonStart = styled.button`
     border-radius: 40px;
     font-family: "Ubuntu", sans-serif;
     font-weight: 600;
-    padding: 14px 30px;
+    padding: 10px 20px;
 
     &:hover {
         background-color: var(--very-light-red);
@@ -60,7 +65,7 @@ const ButtonStart = styled.button`
 const ButtonLearn = styled.button`
     color: var(--white);
     border: 1px solid var(--white);
-    padding: 14px 30px;
+    padding: 10px 20px;
     border-radius: 40px;
     font-family: "Ubuntu", sans-serif;
     font-weight: 600;

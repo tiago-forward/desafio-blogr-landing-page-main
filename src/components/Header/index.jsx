@@ -97,7 +97,7 @@ const ButtonSingUp = styled.button`
     border: 1px solid var(--white);
     border-radius: 40px;
     margin-left: 40px;
-    padding: 14px 30px;
+    padding: 10px 20px;
 
     &:hover {
         background-color: var(--very-light-red);

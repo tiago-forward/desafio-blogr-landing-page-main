@@ -28,7 +28,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    background-color: var(--very-dark-grayish-blue);
+    background-color: var(--white);
     font-family: "Overpass", sans-serif;
   }
 
