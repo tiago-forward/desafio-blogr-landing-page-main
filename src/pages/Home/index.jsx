@@ -1,8 +1,14 @@
+import { useState } from "react";
+import { Header } from "../../components/Header";
+import { HomeSection } from "../../components/Section/HomeSection";
+
 const Home = () => {
+    const [menuIsVisible, setMenuIsVisible] = useState(false);
+
     return (
         <>
-            <h1>Home</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas expedita qui vitae error. Harum numquam optio molestias fuga amet quo veritatis voluptas voluptatum, facilis temporibus dolore, commodi accusantium hic qui!</p>
+            <Header />
+            <HomeSection />
         </>
     )
 }
