@@ -6,10 +6,12 @@ const IllustrativeContentSection = ({ image, titleMain, paragraph }) => {
             <Content>
                 <Image src={image} alt={image} />
             </Content>
-            <Container>
-                <TitleMain>{titleMain}</TitleMain>
-                <Paragraph>{paragraph}</Paragraph>
-            </Container>
+            <TextContainer>
+                <Div>
+                    <TitleMain>{titleMain}</TitleMain>
+                    <Paragraph>{paragraph}</Paragraph>
+                </Div>
+            </TextContainer>
         </Pai>
     )
 }
@@ -21,9 +23,16 @@ const Pai = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 100%;
+
+    @media screen and (min-width: 1024px) {
+        display: flex;
+        align-items: end;
+        justify-content: start;
+    }    
 `
 
-const Container = styled.div`
+const TextContainer = styled.div`
     width: 100%;
     background-color: var(--very-dark-desaturated-blue);
     background-repeat: no-repeat;
@@ -33,6 +42,16 @@ const Container = styled.div`
     padding-bottom: 100px;
     margin-top: 250px;
     z-index: 0;
+    @media screen and (min-width: 1024px) {
+        display: flex;
+        justify-content: end;
+    }
+`
+
+const Div = styled.div`
+    @media screen and (min-width: 1024px) {
+        width: 600px;
+    }
 `
 
 const Content = styled.div`
@@ -52,6 +71,10 @@ const Image = styled.img`
     width: 340px;
     top: -150px;
     z-index: 1;
+
+    @media screen and (min-width: 1024px) {
+        width: 60%;
+    }
 `
 
 const TitleMain = styled.h2`
@@ -59,6 +82,10 @@ const TitleMain = styled.h2`
     text-align: center;
     font-size: 30px;
     padding: 210px 30px 40px 30px;
+
+    @media screen and (min-width: 1024px) {
+        text-align: start;
+    }
 `
 
 const Paragraph = styled.p`
@@ -66,4 +93,8 @@ const Paragraph = styled.p`
     text-align: center;
     line-height: 30px;
     padding: 0px 30px;
+
+    @media screen and (min-width: 1024px) {
+        text-align: start;
+    }
 `

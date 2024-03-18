@@ -36,7 +36,8 @@ const Home = () => {
                     <IllustrativeContentSection
                         image={IllustrationPhones}
                         titleMain="State of the Art Infrastructure"
-                        paragraph="With reliability and speed in mind, worldwide data centers provide the backbone for ultra-fast connectivity. This ensures your site will load instantly, no matter where your readers are, keeping your site competitive." />
+                        paragraph="With reliability and speed in mind, worldwide data centers provide the backbone for ultra-fast connectivity. This ensures your site will load instantly, no matter where your readers are, keeping your site competitive."
+                        isMobile={isMobile} />
                 </section>
                 <SectionContainer>
                     <ContentSection
