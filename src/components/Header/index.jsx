@@ -1,34 +1,80 @@
+import { useState } from "react"
+
 import Logo from "../../../public/images/logo.svg"
 import Arrow from "../../../public/images/icon-arrow-light.svg"
 
 import styled from "styled-components"
 
+import { DropDown } from "./DropDownItem/DropDownProduct"
+
 const Header = () => {
+
+    const [hoverProduct, setHoverProduct] = useState(false);
+    const [hoverCompany, setHoverCompany] = useState(false);
+    const [hoverConnect, setHoverConnect] = useState(false);
+
     return (
         <HeaderContainer>
             <Nav>
                 <MenuContainer>
                     <img src={Logo} alt="Logo Blogr" />
-                    <NavMenu>
-                        <NavLink>
+                    <NavList>
+
+                        <NavLink
+                            onMouseEnter={() => setHoverProduct(true)}>
                             <Link href="/">
-                                Product
-                                <img src={Arrow} alt="" />
+                                <span>Product</span>
+                                <img src={Arrow} alt="Seta para baixo de navegação" />
                             </Link>
                         </NavLink>
-                        <NavLink>
+
+                        <NavLink 
+                            onMouseEnter={() => setHoverCompany(true)}>
                             <Link href="/">
-                                Company
-                                <img src={Arrow} alt="" />
+                                <span>Company</span>
+                                <img src={Arrow} alt="Seta para baixo de navegação" />
                             </Link>
                         </NavLink>
-                        <NavLink>
+
+                        <NavLink 
+                            onMouseEnter={() => setHoverConnect(true)}>
                             <Link href="/">
-                                Connect
-                                <img src={Arrow} alt="" />
+                                <span>Connect</span>
+                                <img src={Arrow} alt="Seta para baixo de navegação" />
                             </Link>
                         </NavLink>
-                    </NavMenu>
+
+                    </NavList>
+
+                    {hoverProduct && (
+                        <DropDownProductList
+                            onMouseLeave={() => setHoverProduct(false)}>
+                            <DropDown text="Overview" link="/" />
+                            <DropDown text="Pricing" link="/" />
+                            <DropDown text="Marketplace" link="/" />
+                            <DropDown text="Features" link="/" />                        <DropDown text="Integrations" link="/" />
+                        </DropDownProductList>
+                    )}
+
+                    {hoverCompany && (
+                        <DropDownCompanyList
+                            onMouseLeave={() => setHoverCompany(false)}>
+                            <DropDown text="About" link="/" />
+                            <DropDown text="Team" link="/" />
+                            <DropDown text="Blog" link="/" />
+                            <DropDown text="Careers" link="/" />
+                        </DropDownCompanyList>
+                    )}
+
+                    {hoverConnect && (
+                        <DropDownConnectList
+                            onMouseLeave={() => setHoverConnect(false)}>
+                            <DropDown text="Contact" link="/" />
+                            <DropDown text="Newsletter" link="/" />
+                            <DropDown text="Linkedin" link="/" />
+                        </DropDownConnectList>
+                    )}
+                    
                 </MenuContainer>
                 <LoginContainer>
                     <NavLogin>
@@ -62,15 +108,59 @@ const Nav = styled.nav`
 const MenuContainer = styled.div`
     display: flex;
     align-items: center;
+    position: relative;
 `
 
-const NavMenu = styled.ul`
+const NavList = styled.ul`
 
 `
+
+
+
+
+const DropDownProductList = styled.ul`
+    display: block;
+    position: absolute;
+    top: 45px;
+    left: 106px;
+    background-color: var(--white);
+    border-radius: 5px;
+    padding: 25px 20px;
+`
+
+const DropDownCompanyList = styled.ul`
+    display: block;
+    position: absolute;
+    top: 45px;
+    left: 270px;
+    background-color: var(--white);
+    border-radius: 5px;
+    padding: 25px 20px;
+`
+
+const DropDownConnectList = styled.ul`
+    display: block;
+    position: absolute;
+    top: 45px;
+    left: 395px;
+    background-color: var(--white);
+    border-radius: 5px;
+    padding: 25px 20px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+`
+
+
+
 
 const NavLink = styled.li`
     display: inline-block;
-    margin-left: 40px;    
+    position: relative;
+    margin-left: 40px;
+    
+    &:hover {
+        text-decoration: 2px underline;
+        color: var(--white);
+    }
 `
 
 const Link = styled.a`
@@ -105,3 +195,5 @@ const ButtonSingUp = styled.button`
         border: 1px solid var(--very-light-red);
     }
 `
+
+
