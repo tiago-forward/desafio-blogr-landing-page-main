@@ -16,6 +16,9 @@ const Titulo = styled.h3`
     text-align: center;
     font-size: 25px;
     padding: 40px 30px;
+    @media screen and (min-width: 1024px) {
+        text-align: start;
+    }
 `
 
 const Paragraph = styled.p`
@@ -23,4 +26,8 @@ const Paragraph = styled.p`
     text-align: center;
     line-height: 30px;
     padding: 0px 30px;
+
+    @media screen and (min-width: 1024px) {
+        text-align: start;
+    }
 `
