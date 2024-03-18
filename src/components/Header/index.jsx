@@ -18,30 +18,26 @@ const Header = () => {
             <Nav>
                 <MenuContainer>
                     <img src={Logo} alt="Logo Blogr" />
+
+                
                     <NavList>
 
                         <NavLink
-                            onMouseEnter={() => setHoverProduct(true)}>
-                            <Link href="/">
-                                <span>Product</span>
-                                <img src={Arrow} alt="Seta para baixo de navegação" />
-                            </Link>
+                            onClick={() => setHoverProduct(prevState => !prevState)}>
+                            <span>Product</span>
+                            <img src={Arrow} alt="Seta para baixo de navegação" />
                         </NavLink>
 
-                        <NavLink 
-                            onMouseEnter={() => setHoverCompany(true)}>
-                            <Link href="/">
-                                <span>Company</span>
-                                <img src={Arrow} alt="Seta para baixo de navegação" />
-                            </Link>
+                        <NavLink
+                            onClick={() => setHoverCompany(prevState => !prevState)}>
+                            <span>Company</span>
+                            <img src={Arrow} alt="Seta para baixo de navegação" />
                         </NavLink>
 
-                        <NavLink 
-                            onMouseEnter={() => setHoverConnect(true)}>
-                            <Link href="/">
-                                <span>Connect</span>
-                                <img src={Arrow} alt="Seta para baixo de navegação" />
-                            </Link>
+                        <NavLink
+                            onClick={() => setHoverConnect(prevState => !prevState)}>
+                            <span>Connect</span>
+                            <img src={Arrow} alt="Seta para baixo de navegação" />
                         </NavLink>
 
                     </NavList>
@@ -74,7 +70,7 @@ const Header = () => {
                             <DropDown text="Linkedin" link="/" />
                         </DropDownConnectList>
                     )}
-                    
+
                 </MenuContainer>
                 <LoginContainer>
                     <NavLogin>
@@ -155,17 +151,17 @@ const DropDownConnectList = styled.ul`
 const NavLink = styled.li`
     display: inline-block;
     position: relative;
+    color: var(--white);
     margin-left: 40px;
+    cursor: pointer;
+
+    img {
+        margin-left: 10px;
+    }
     
     &:hover {
         text-decoration: 2px underline;
         color: var(--white);
-    }
-`
-
-const Link = styled.a`
-    img {
-        margin-left: 10px;
     }
 `
 
