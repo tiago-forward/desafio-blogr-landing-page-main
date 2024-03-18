@@ -49,12 +49,16 @@ const ContentContainer = styled.div`
 
     @media screen and (min-width: 1024px) {
         flex-direction: row;
+        justify-content: space-evenly;
     }
 `
 
 const Image = styled.img`
     width: 100%;
     max-width: 700px;
+    @media screen and (min-width: 1024px) {
+        width: 50%;
+    }
 `
 
 const TitleMain = styled.h2`

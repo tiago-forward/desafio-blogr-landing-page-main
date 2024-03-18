@@ -19,10 +19,7 @@ const Section = styled.section`
     background: rgb(249,139,117);
     background-image: url("../../../../public/images/bg-pattern-intro-mobile.svg"), linear-gradient(111deg, rgba(249,139,117,1) 0%, rgba(250,78,95,1) 100%);
     background-repeat: no-repeat;
-    /* background-position-y: center;
-    background-position-x: 200px; */
-    background-position-x: center;
-    background-position-y: center;
+    background-position: 40% 40%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -30,13 +27,18 @@ const Section = styled.section`
     height: 70vh;
     border-bottom-left-radius: 120px;
     text-align: center;
+    
+    @media screen and (min-width: 1024px) {
+        background-image: url("../../../../public/images/bg-pattern-intro-desktop.svg"), linear-gradient(111deg, rgba(249,139,117,1) 0%, rgba(250,78,95,1) 100%);
+        background-position: center left;
+    }   
 `
 
 const Titulo = styled.h1`
     
     color: var(--white);
     font-size: 32px;
-    padding: 0px 15px;
+    padding: 0px 25px;
     margin-bottom: 40px;
 `
 const Paragraph = styled.p`
