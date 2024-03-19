@@ -1,8 +1,6 @@
 //Bibliotecas
-import { useState } from "react";
 import { useMediaQuery } from "react-responsive";
 //Components
-import { MenuMobile } from "../../components/Header/MenuMobile";
 import { Header } from "../../components/Header";
 import { HomeSection } from "../../components/Section/HomeSection";
 import { ContentSection } from "../../components/Section/ContentSection";
@@ -18,7 +16,6 @@ import IllustrationPhones from "../../../public/images/illustration-phones.svg"
 import { SectionContainer } from "./styles";
 
 const Home = () => {
-    const [menuIsVisible, setMenuIsVisible] = useState(false);
     
     const isMobile = useMediaQuery({
         query: '(min-width: 1024px)'
@@ -29,9 +26,6 @@ const Home = () => {
 
     return (
         <>
-            <MenuMobile
-                menuIsVisible={menuIsVisible}
-                setMenuIsVisible={setMenuIsVisible} />
             <Header />
             <HomeSection />
             <main>
