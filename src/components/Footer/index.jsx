@@ -6,7 +6,6 @@ const Footer = () => {
         <>
             <FooterContainer>
                 <Nav>
-
                     <ImageLogo src={Logo} alt="Logo Blogr" />
                     <div>
                         <Span>Product</Span>

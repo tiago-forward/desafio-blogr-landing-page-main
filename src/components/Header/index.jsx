@@ -5,7 +5,7 @@ import Arrow from "../../../public/images/icon-arrow-light.svg"
 
 import styled from "styled-components"
 
-import { DropDown } from "./DropDownItem/DropDownProduct"
+import { DropDown } from "./DropDownItem/DropDown"
 
 const Header = () => {
 
@@ -19,7 +19,6 @@ const Header = () => {
                 <MenuContainer>
                     <img src={Logo} alt="Logo Blogr" />
 
-                
                     <NavList>
 
                         <NavLink
@@ -108,9 +107,10 @@ const MenuContainer = styled.div`
 `
 
 const NavList = styled.ul`
-
+    @media screen and (max-width: 1024px) {
+        display: none;
+    }
 `
-
 
 
 
@@ -170,7 +170,9 @@ const LoginContainer = styled.div`
 `
 
 const NavLogin = styled.ul`
-
+    @media screen and (max-width: 1024px) {
+        display: none;
+    }
 `
 
 const ButtonLogin = styled.button`

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useMediaQuery } from "react-responsive";
 
+import { MenuMobile } from "../../components/Header/MenuMobile";
 import { Header } from "../../components/Header";
 import { HomeSection } from "../../components/Section/HomeSection";
 import { ContentSection } from "../../components/Section/ContentSection";
@@ -17,15 +18,19 @@ import styled from "styled-components"
 
 const Home = () => {
     const [menuIsVisible, setMenuIsVisible] = useState(false);
+    
     const isMobile = useMediaQuery({
         query: '(min-width: 1024px)'
-      })
+    })
 
     const illustrationEditor = !isMobile ? IllustrationEditorMobile : IllustrationEditorDesktop;
     const illustrationLaptop = !isMobile ? IllustrationLaptopMobile : IllustrationLaptopDesktop;
 
     return (
         <>
+            <MenuMobile
+                menuIsVisible={menuIsVisible}
+                setMenuIsVisible={setMenuIsVisible} />
             <Header />
             <HomeSection />
             <main>
