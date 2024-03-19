@@ -1,20 +1,21 @@
+//Bibliotecas
 import { useState } from "react";
 import { useMediaQuery } from "react-responsive";
-
+//Components
 import { MenuMobile } from "../../components/Header/MenuMobile";
 import { Header } from "../../components/Header";
 import { HomeSection } from "../../components/Section/HomeSection";
 import { ContentSection } from "../../components/Section/ContentSection";
 import { IllustrativeContentSection } from "../../components/Section/IllustrativeContentSection";
 import { Footer } from "../../components/Footer";
-
+//Imagens
 import IllustrationEditorMobile from "../../../public/images/illustration-editor-mobile.svg"
 import IllustrationEditorDesktop from "../../../public/images/illustration-editor-desktop.svg"
 import IllustrationLaptopMobile from "../../../public/images/illustration-laptop-mobile.svg"
 import IllustrationLaptopDesktop from "../../../public/images/illustration-laptop-desktop.svg"
 import IllustrationPhones from "../../../public/images/illustration-phones.svg"
-
-import styled from "styled-components"
+//Estilos
+import { SectionContainer } from "./styles";
 
 const Home = () => {
     const [menuIsVisible, setMenuIsVisible] = useState(false);
@@ -70,10 +71,3 @@ const Home = () => {
 }
 
 export { Home }
-
-const SectionContainer = styled.section`
-    @media screen and (min-width: 1024px) {
-        display: flex;
-        flex-direction: column;
-    }
-`
