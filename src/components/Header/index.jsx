@@ -1,10 +1,9 @@
-//Bibliotecas
 import { useState } from "react"
-//Estilos
+
 import { HeaderContainer } from "./styles"
-//Components
+
 import { NavLinks } from "./NavLinks"
-//Imagens
+
 import Logo from "../../../public/images/logo.svg"
 import IconeMenu from "../../../public/images/icon-hamburger.svg"
 import IconeClose from "../../../public/images/icon-close.svg"

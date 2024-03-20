@@ -1,5 +1,6 @@
-import Logo from "../../../public/images/logo.svg"
 import { FooterContainer } from "./styles"
+
+import Logo from "../../../public/images/logo.svg"
 
 const Footer = () => {
     return (

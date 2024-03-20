@@ -1,5 +1,6 @@
-import styled from "styled-components"
 import { useState } from "react";
+
+import { SubLinksContainer } from "./styles";
 
 const NavLinks = ({ Arrow }) => {
 
@@ -31,7 +32,7 @@ const NavLinks = ({ Arrow }) => {
                 <div 
                     key={index} 
                     onMouseEnter={() => setIsHovered(index)}
-                    onMouseLeave={() => setIsHovered(null)} >
+                    onMouseLeave={() => setIsHovered(null)}>
 
                     <li className="link-title">{link.name}
                         <img className="seta close" src={Arrow} alt="Seta" />
@@ -39,8 +40,6 @@ const NavLinks = ({ Arrow }) => {
                     
                     {link.submenu && isHovered === index && (
                         <SubLinksContainer className="sublinks-container" >
-                            <div className="space-dropdown">
-                            </div>
                             {link.sublinks.map((sublink, index) => (
                                 <li key={index}>
                                     <a href={sublink.link}>{sublink.name}</a>
@@ -56,33 +55,3 @@ const NavLinks = ({ Arrow }) => {
 }
 
 export { NavLinks }
-
-const SubLinksContainer = styled.ul`
-    background-color: white;
-    position: absolute;
-    border-radius: 5px;
-
-    .space-dropdown {
-        &::before {
-            content: '';
-            position: absolute;
-            width: 100%;
-            height: 25px;
-            background-color: transparent;
-            top: 0;
-        }
-    }
-
-    li {
-        margin: 20px;
-    }
-
-    a {
-        color: var(--black);
-        margin-top: 20px;
-
-        &:hover {
-        font-weight: 600;
-    }
-    }
-`

@@ -29,7 +29,7 @@ export const HeaderContainer = styled.header`
         }
 
         .seta {
-            margin-left: 10px;
+            margin-left: 5px;
         }
 
         @media screen and (max-width: 768px) {
@@ -68,7 +68,7 @@ export const HeaderContainer = styled.header`
     }
 
     .line-black {
-        margin: 20px 20px 30px 20px;
+        margin: 20px 30px 30px 30px;
         border-top: 1px solid var(--grayish-blue);
     }
 
@@ -114,12 +114,14 @@ export const HeaderContainer = styled.header`
         position: absolute;
         background-color: var(--white);
         width: 90%;
-        height: 85vh;
-        top: 50px;
+        top: 65px;
         border-radius: 5px;
         transition: margin-left .4s ease;
         overflow: hidden;
         margin-left: -200%;
+        -webkit-box-shadow: 0px 0px 16px -4px rgba(0,0,0,0.69);
+        -moz-box-shadow: 0px 0px 16px -4px rgba(0,0,0,0.69);
+        box-shadow: 0px 0px 16px -4px rgba(0,0,0,0.69);
 
         .nav-links-mobile {
             text-align: center;
@@ -131,7 +133,7 @@ export const HeaderContainer = styled.header`
         }
 
         .seta {
-            margin-left: 10px;
+            margin-left: 5px;
         }
 
         @media screen and (min-width: 768px) {

@@ -1,4 +1,5 @@
 import { TitleMain, ContentContainer } from "./styles"
+
 import { Content } from "./Content"
 
 const ContentSection = ({ isMobile, titleMain, imageTop, imageRight, imageLeft, title1, paragraph1, title2, paragraph2 }) => {
