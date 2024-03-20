@@ -1,11 +1,10 @@
-import { TitleMain, ContentContainer } from "./styles"
+import { ContentContainer } from "./styles"
 
 import { Content } from "./Content"
 
-const ContentSection = ({ isMobile, titleMain, imageTop, imageRight, imageLeft, title1, paragraph1, title2, paragraph2 }) => {
+const ContentSection = ({ isMobile, imageTop, imageRight, title1, paragraph1, title2, paragraph2 }) => {
     return (
-        <>
-            <TitleMain>{titleMain}</TitleMain>
+        <div className="container">
             <ContentContainer>
                 
                 {!isMobile ? (
@@ -36,7 +35,7 @@ const ContentSection = ({ isMobile, titleMain, imageTop, imageRight, imageLeft, 
 
             </ContentContainer>
 
-        </>
+        </div>
     )
 }
 
