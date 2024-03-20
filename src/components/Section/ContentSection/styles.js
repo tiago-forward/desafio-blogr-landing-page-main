@@ -22,6 +22,6 @@ export const ContentContainer = styled.div`
 
     @media screen and (min-width: 1024px) {
         flex-direction: row;
-        justify-content: space-around;
+        justify-content: center;
     }
 `

@@ -26,6 +26,7 @@ export const IllustrativeContainer = styled.div`
         justify-content: center;
         align-items: center;
         width: 100%;
+        
 
         .image-phones {
             position: absolute;
@@ -35,12 +36,10 @@ export const IllustrativeContainer = styled.div`
             
             @media screen and (min-width: 1024px) {
                 position: static;
-                top: 0;
-                width: 22%;
-                scale: calc(1.4);
-                margin-left: 40px;
+                width: 35%;
+                padding-top: 10px;
+                padding-right: 100px;
             }   
-            
         }
 
         .content {
@@ -64,7 +63,8 @@ export const IllustrativeContainer = styled.div`
 
         @media screen and (min-width: 1024px) {
             position: static;
-            justify-content: space-around;
+            justify-content: center;
+            height: 400px;
         }   
 
     }
