@@ -30,17 +30,20 @@ const NavLinks = ({ Arrow }) => {
             {links.map((link, index) => (
                 <div 
                     key={index} 
-                    onMouseEnter={() => setIsHovered(index)} >
+                    onMouseEnter={() => setIsHovered(index)}
+                    onMouseLeave={() => setIsHovered(null)} >
 
                     <li className="link-title">{link.name}
                         <img className="seta close" src={Arrow} alt="Seta" />
                     </li>
                     
                     {link.submenu && isHovered === index && (
-                        <SubLinksContainer className="sublinks-container" onMouseLeave={() => setIsHovered(null)} >
+                        <SubLinksContainer className="sublinks-container" >
+                            <div className="space-dropdown">
+                            </div>
                             {link.sublinks.map((sublink, index) => (
                                 <li key={index}>
-                                   <a href={sublink.link}>{sublink.name}</a> 
+                                    <a href={sublink.link}>{sublink.name}</a>
                                 </li>
                             ))}
                         </SubLinksContainer>
@@ -58,8 +61,17 @@ const SubLinksContainer = styled.ul`
     background-color: white;
     position: absolute;
     border-radius: 5px;
-    margin-top: 20px;
-    overflow: hidden;
+
+    .space-dropdown {
+        &::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 25px;
+            background-color: transparent;
+            top: 0;
+        }
+    }
 
     li {
         margin: 20px;
@@ -68,5 +80,9 @@ const SubLinksContainer = styled.ul`
     a {
         color: var(--black);
         margin-top: 20px;
+
+        &:hover {
+        font-weight: 600;
+    }
     }
 `

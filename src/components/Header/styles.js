@@ -15,6 +15,7 @@ export const HeaderContainer = styled.header`
 
         .img-logo {
             margin-right: 40px;
+            margin-bottom: 15px;
         }
     }
 
@@ -22,7 +23,8 @@ export const HeaderContainer = styled.header`
         display: inline-flex;
 
         .link-title {
-            margin: 0 15px;
+            cursor: pointer;
+            margin: 0 15px 15px 15px;
             color: var(--white);
         }
 
@@ -39,6 +41,7 @@ export const HeaderContainer = styled.header`
         
         .btn-login {
             color: var(--white);
+            margin-bottom: 15px;
         }
     
         .btn-singup {
@@ -50,6 +53,7 @@ export const HeaderContainer = styled.header`
             font-weight: 600;
             padding: 10px 20px;
             margin-left: 20px;
+            margin-bottom: 15px;
     
             &:hover {
                 background-color: var(--very-light-red);
@@ -122,8 +126,8 @@ export const HeaderContainer = styled.header`
         }
 
         .link-title {
-            margin-top: 25px;
             color: var(--black);
+            margin: 25px 0px 20px 0px;
         }
 
         .seta {
