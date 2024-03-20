@@ -8,10 +8,11 @@ import { IllustrativeContentSection } from "../../components/Section/Illustrativ
 import { Footer } from "../../components/Footer";
 //Imagens
 import IllustrationEditorMobile from "../../../public/images/illustration-editor-mobile.svg"
-import IllustrationEditorDesktop from "../../../public/images/illustration-editor-desktop.png"
+import IllustrationEditorDesktop from "../../../public/images/illustration-editor-desktop.svg"
 import IllustrationLaptopMobile from "../../../public/images/illustration-laptop-mobile.svg"
-import IllustrationLaptopDesktop from "../../../public/images/illustration-laptop-desktop.png"
+import IllustrationLaptopDesktop from "../../../public/images/illustration-laptop-desktop.svg"
 import IllustrationPhones from "../../../public/images/illustration-phones.svg"
+import ImageCircle from "../../../public/images/bg-pattern-circles.svg"
 //Estilos
 import { SectionContainer, TitleMain } from "./styles";
 
@@ -43,13 +44,14 @@ const Home = () => {
                             isMobile={isMobile} />
                     </div>
                 </SectionContainer>
-                <section>
+                <SectionContainer>
                     <IllustrativeContentSection
-                        image={IllustrationPhones}
+                        imageIllustration={IllustrationPhones}
+                        imageCircle={ImageCircle}
                         titleMain="State of the Art Infrastructure"
                         paragraph="With reliability and speed in mind, worldwide data centers provide the backbone for ultra-fast connectivity. This ensures your site will load instantly, no matter where your readers are, keeping your site competitive."
-                        isMobile={isMobile} />
-                </section>
+                        ss={isMobile} />
+                </SectionContainer>
                 <SectionContainer>
                     <div className="container-content-two">
                         <ContentSection

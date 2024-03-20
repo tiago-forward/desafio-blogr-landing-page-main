@@ -16,12 +16,12 @@ export const ContentContainer = styled.div`
         width: 100%;
         max-width: 700px;
         @media screen and (min-width: 1024px) {
-            width: 50%;
+            width: 35%;
         }
     }
 
     @media screen and (min-width: 1024px) {
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: space-around;
     }
 `

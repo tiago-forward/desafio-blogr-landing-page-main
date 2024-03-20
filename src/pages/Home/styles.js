@@ -9,15 +9,6 @@ export const SectionContainer = styled.section`
     @media screen and (min-width: 1024px) {
         display: flex;
         flex-direction: column;
-
-        .container-content-one {
-            margin-left: 100px;
-        }
-
-        .container-content-two {
-            margin-right: 100px;
-        }
-
     }
 `
 

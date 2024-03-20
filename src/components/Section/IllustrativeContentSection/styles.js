@@ -1,83 +1,77 @@
 import styled from "styled-components"
 
 export const IllustrativeContainer = styled.div`
-    position: relative;
+    background-color: var(--very-dark-desaturated-blue);
+    border-radius: 0 100px 0 100px;
+    text-align: center;
+    padding-top: 200px;
+    padding-bottom: 100px;
+    margin-top: 200px;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
+    flex-direction: column;
 
-    .illustrative {
-        background-image: url("../../../../public/images/bg-pattern-circles.svg");
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position-y: -70px;
-        background-position-x: 0px;
-        position: absolute;
-        z-index: 1;
-    }
 
-    .img {
-        display: block;
-        margin: 0 auto;
-        position: relative;
-        width: 340px;
-        top: -150px;
-        z-index: 1;
+    .circles-container {
         
-        @media screen and (min-width: 1024px) {
-            width: 60%;
+        .image-circles {
+            position: absolute;
+            left: 0;
+            width: 100%;
         }
     }
 
-    .text-container {
+    .content-container {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         width: 100%;
-        background-color: var(--very-dark-desaturated-blue);
-        background-repeat: no-repeat;
-        background-size: cover;
-        border-top-right-radius: 100px;
-        border-bottom-left-radius: 100px;
-        padding-bottom: 100px;
-        margin-top: 250px;
-        z-index: 0;
 
-        @media screen and (min-width: 1024px) {
+        .image-phones {
+            position: absolute;
+            width: 300px;
+            top: -360px;
+            z-index: 1;
+            
+            @media screen and (min-width: 1024px) {
+                position: static;
+                top: 0;
+                width: 22%;
+                scale: calc(1.4);
+                margin-left: 40px;
+            }   
+            
+        }
+
+        .content {
             display: flex;
-            justify-content: end;
-        }
-    }
-
-    .container {
-        @media screen and (min-width: 1024px) {
+            flex-direction: column;
+            justify-content: space-around;
             width: 600px;
-        }
-    }
+                
+            h2 {
+                color: var(--white);
+                font-size: 28px;
+                margin: 0px 30px 30px 30px;
+            }
 
-    .title-main {
-        color: var(--white);
-        text-align: center;
-        font-size: 30px;
-        padding: 210px 30px 40px 30px;
+            p {
+                color: var(--white);
+                margin: 0px 30px;
+                line-height: 30px;
+            }
+        }
 
         @media screen and (min-width: 1024px) {
-            text-align: start;
-        }
-    }
+            position: static;
+            justify-content: space-around;
+        }   
 
-    p {
-        color: var(--white);
-        text-align: center;
-        line-height: 30px;
-        padding: 0px 30px;
-
-        @media screen and (min-width: 1024px) {
-            text-align: start;
-        }
     }
 
     @media screen and (min-width: 1024px) {
-        display: flex;
-        align-items: end;
-        justify-content: start;
+        padding-top: 0px;
+        padding-bottom: 0px;
+        text-align: start;
     }   
 `
