@@ -2,6 +2,10 @@ import styled from "styled-components"
 
 export const SectionContainer = styled.section`
 
+    .container-content-two {
+        margin-top: 100px;
+    }
+
     @media screen and (min-width: 1024px) {
         display: flex;
         flex-direction: column;
@@ -12,7 +16,6 @@ export const SectionContainer = styled.section`
 
         .container-content-two {
             margin-right: 100px;
-            margin-top: 200px;
         }
 
     }
