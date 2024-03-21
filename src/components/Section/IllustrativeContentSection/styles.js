@@ -11,14 +11,18 @@ export const IllustrativeContainer = styled.div`
     flex-direction: column;
 
 
-    .circles-container {
+    /* .circles-container {
+        position: relative;
         
         .image-circles {
+            clip-path: polygon(0 50%, 98% 50%, 100% 100%, 0 100%);
             position: absolute;
             left: 0;
-            width: 100%;
+            top: -490px;
+            width: 600px;
+            z-index: 1;
         }
-    }
+    } */
 
     .content-container {
         position: relative;
