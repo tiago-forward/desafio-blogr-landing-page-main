@@ -20,6 +20,10 @@ export const ContentContainer = styled.div`
         }
     }
 
+    .cont-img {
+
+    }
+
     @media screen and (min-width: 1024px) {
         flex-direction: row;
         justify-content: center;

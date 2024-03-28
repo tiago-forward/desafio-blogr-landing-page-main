@@ -2,7 +2,7 @@ import styled from "styled-components"
 
 export const SectionContainer = styled.section`
     background: rgb(249,139,117);
-    background-image: url("../../../../public/images/bg-pattern-intro-mobile.svg"), linear-gradient(111deg, rgba(249,139,117,1) 0%, rgba(250,78,95,1) 100%);
+    background-image: url("../../../../public/bg-pattern-intro-mobile.svg"), linear-gradient(111deg, rgba(249,139,117,1) 0%, rgba(250,78,95,1) 100%);
     background-repeat: no-repeat;
     background-position: 40% 40%;
     display: flex;
@@ -59,7 +59,7 @@ export const SectionContainer = styled.section`
     }
     
     @media screen and (min-width: 1024px) {
-        background-image: url("../../../../public/images/bg-pattern-intro-desktop.svg"), linear-gradient(111deg, rgba(249,139,117,1) 0%, rgba(250,78,95,1) 100%);
+        background-image: url("../../../../public/bg-pattern-intro-desktop.svg"), linear-gradient(111deg, rgba(249,139,117,1) 0%, rgba(250,78,95,1) 100%);
         background-position: center left;
     }   
 `

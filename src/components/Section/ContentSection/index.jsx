@@ -9,7 +9,8 @@ const ContentSection = ({ isMobile, imageTop, imageRight, title1, paragraph1, ti
                 
                 {!isMobile ? (
                     <>
-                        <img src={imageTop} alt={imageTop} />
+                        <div className="img-container">
+                            <img src={imageTop} alt={imageTop} /></div>
                         <div>
                             <Content
                                 title={title1}
@@ -29,7 +30,9 @@ const ContentSection = ({ isMobile, imageTop, imageRight, title1, paragraph1, ti
                                 title={title2}
                                 paragraph={paragraph2} />
                         </div>
-                        <img src={imageRight} alt={imageRight} />
+                        <div className="img-container">
+                            <img src={imageRight} alt={imageRight} />
+                        </div>
                     </>
                 )}
 
