@@ -16,16 +16,32 @@ export const ContentContainer = styled.div`
         width: 100%;
         max-width: 700px;
         @media screen and (min-width: 1024px) {
-            width: 35%;
+
         }
     }
 
-    .cont-img {
+    .img-container1, .img-container2 {
+        overflow: hidden;
+    }
 
+    .text-container1 {
+        margin-right: 200px;
+    }
+
+    .text-container2 {
+        margin-left: 200px;
     }
 
     @media screen and (min-width: 1024px) {
         flex-direction: row;
-        justify-content: center;
+        justify-content: space-between;
+
+        .img2 {
+                transform: translate(160px, 0px);
+            }
+        
+        .img1 {
+            transform: translate(-170px, 0px);
+        }
     }
 `
