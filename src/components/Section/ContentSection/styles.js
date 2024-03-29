@@ -20,18 +20,6 @@ export const ContentContainer = styled.div`
         }
     }
 
-    .img-container1, .img-container2 {
-        overflow: hidden;
-    }
-
-    .text-container1 {
-        margin-right: 200px;
-    }
-
-    .text-container2 {
-        margin-left: 200px;
-    }
-
     @media screen and (min-width: 1024px) {
         flex-direction: row;
         justify-content: space-between;
@@ -42,6 +30,18 @@ export const ContentContainer = styled.div`
         
         .img1 {
             transform: translate(-170px, 0px);
+        }
+
+        .img-container1, .img-container2 {
+            overflow: hidden;
+        }
+
+        .text-container1 {
+            margin-right: 200px;
+        }
+
+        .text-container2 {
+            margin-left: 200px;
         }
     }
 `
